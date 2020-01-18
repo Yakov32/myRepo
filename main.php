@@ -1,8 +1,8 @@
 <?php
-	//Класс курицы
+	//Класс курицы.
 	require_once ("class_chiken.php");
 	
-	//Класс коровы
+	//Класс коровы.
 	require_once ("class_Cow.php");
 	
 	//Класс Хлева
