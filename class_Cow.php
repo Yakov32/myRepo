@@ -2,7 +2,7 @@
 	class Cow{
 		protected $id;
 		public $regInStable;
-		//Тут кол-во молока в корове, каждый раз случайно генерируется методом на 14 строке.
+		//Тут кол-во молока в корове, каждый раз случайно генерируется методом на 14 строке..
 		private $milk;
 
 		public function __construct($animalId){
