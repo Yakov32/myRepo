@@ -12,7 +12,7 @@
 		}
 
 		//Метод генерации яйца
-		public function chikensEgg(){
+		public function generateYield(){
 			$this->egg= rand(0,1);
 			return $this->egg;
 		}

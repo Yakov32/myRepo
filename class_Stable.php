@@ -44,20 +44,20 @@
 		//
 		public function serveAnimals(){
 			
-			//Собираем урожай с животных
+			//Собираем продукцию с животных
 			//1 цикл это обход 1-го животного
 
 			//Обохдим куриц
 			foreach ($this->chikens as $value){
 				//если животное зарегестрированно, то собираем с него продукцию
 				if($value->regInStable == true){
-				    $this->countEggs += $value->ChikensEgg();
+				    $this->countEggs += $value->generateYield();
 				}
 			}
 			//Обходим коров
 			foreach ($this->cows as $value){
 				if($value->regInStable == true){
-				    $this->countMilk += $value->cowsMilk();
+				    $this->countMilk += $value->generateYield();
 				}
 			}
 			//Проверка. На яйца нету, потому что там 0 или 1, возможно все курицы дадут 0 яиц.

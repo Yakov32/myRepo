@@ -11,7 +11,7 @@
 		}
 
 		//Метод генерации кол-ва молока
-		public function cowsMilk(){
+		public function generateYield(){
 			$this->milk = rand(8,12);
 			return $this->milk;
 		}
