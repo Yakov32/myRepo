@@ -14,7 +14,7 @@ In the class Stable file, the class of the barn, in which the methods of adding 
 In the main.php file, all these classes are connected, Stable object is created, and its methods are called.
 
 
-* How to start a project
+* How to start a project<br>
 apt-get install php
 <br>
 Start Terminal
