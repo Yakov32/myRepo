@@ -15,10 +15,7 @@ In the main.php file, all these classes are connected, Stable object is created,
 
 
 * How to start a project<br>
-apt-get install php
-<br>
-Start Terminal
-<br>
-Go to project directory
-<br>
+apt-get install php<br>
+Start Terminal<br>
+Go to project directory<br>
 -php main.php
