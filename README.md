@@ -16,4 +16,4 @@ In the main.php file, all these classes are connected, Stable object is created,
 1.Start Terminal<br>
 2.apt-get install php<br>
 3.Go to project directory<br>
-4. -php main.php
+4.-php main.php<br>
