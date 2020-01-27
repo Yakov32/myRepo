@@ -23,9 +23,7 @@
 		public function addAnimal($animalType){
 
 			$animalType = strtolower($animalType);
-
-			if($animalType == "chiken" || $animalType == "cow"){
-
+				
 				//Генерируем id животного. Если курица то к номеру приписывается префикс "ch", если корова - "co".
 				switch ($animalType) {
 					case 'chiken':
@@ -35,15 +33,14 @@
 						break;
 						
 					case 'cow':
-						$idAnimal = count($this->chikens) . "ch";
+						$idAnimal = count($this->cows) . "ch";
 						$this->cows[] = new Cow($idAnimal);
 						return "В хлев добавлена корова\n";
 						break;
 
 					default:
 						return "Неправильно введен тип животного";
-						break;	
-				}
+						break;		
 			}	
 		}	
 		//Функция сбора продукции с животных.
