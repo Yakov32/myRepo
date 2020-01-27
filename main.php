@@ -1,5 +1,5 @@
 <?php
-	//
+	//Базовый класс
 	require_once("classes/Animal.php");
 	//Класс курицы,наследник класса Animal
 	require_once ("classes/Chiken.php");
@@ -9,8 +9,8 @@
 	
 	//Класс Хлева
 	//Метод добавления животного - addAnimal, в параметре тип животного (chiken/cow)
+	//Метод обслуживания животных - serveAnimals
 	//Метод показа всего собранного урожая - yieldDisplay
-	//Метод обслуживания животных - serveAnimals 
 	require_once ("classes/Stable.php");
 
 
@@ -33,7 +33,11 @@
 	}
 
 	//Показываем на экран число собранной продукции.
-	 echo $objStable->yieldDisplay() ."\n";
+	 echo $objStable->yieldDisplay();
+
+	//Раскоментируйте строки ниже если хотите взглянуть на массив с обьектами.
+	//print_r($objStable->chikens);
+	//print_r($objStable->cows);
 
 	 
 	

@@ -7,8 +7,6 @@
 			$this->id = $animalId;
 			$this->regInStable = true;
 		}
-
-		
 	}
 
 ?>

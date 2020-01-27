@@ -5,10 +5,8 @@
 		public $cows = array();
 
 		//Образные хранилища в которые складываются весь собранный урожай.
-	    private $countMilk;
+	    public $countMilk;
 	    private $countEggs;
-
-
 
 		//Конструктор, в нем инициализируются животные:по условию в хлеву изначально 20 куриц и 10 коров.
 		public function __construct(){
@@ -28,22 +26,25 @@
 
 			if($animalType == "chiken" || $animalType == "cow"){
 
-				//Генерируем id, или же номер животного. Если курица то к номеру приписывается префикс "ch", если корова - "co".
-				if($animalType == "chiken"){
-				$idAnimal = count($this->chikens) . "ch";
-				$this->chikens[] = new Chiken($idAnimal);
-				return "В хлев добавлена курица\n";
-				}
+				//Генерируем id животного. Если курица то к номеру приписывается префикс "ch", если корова - "co".
+				switch ($animalType) {
+					case 'chiken':
+						$idAnimal = count($this->chikens) . "ch";
+						$this->chikens[] = new Chiken($idAnimal);
+						return "В хлев добавлена курица\n";
+						break;
+						
+					case 'cow':
+						$idAnimal = count($this->chikens) . "ch";
+						$this->cows[] = new Cow($idAnimal);
+						return "В хлев добавлена корова\n";
+						break;
 
-				if($animalType == "cow"){
-				$idAnimal = count($this->chikens) . "co";
-				$this->cows[] = new Cow($idAnimal);
-				return"В хлев добавлена корова\n";
-				}	
-			}
-			else{
-				return false;
-			}
+					default:
+						return "Неправильно введен тип животного";
+						break;	
+				}
+			}	
 		}	
 		//Функция сбора продукции с животных.
 		public function serveAnimals(){
@@ -73,13 +74,12 @@
 
 		//Метод показа всего собранного  урожая.
 		public function yieldDisplay(){
-			return  "За заход было собрано: $this->countMilk литров молока и $this->countEggs яиц";
+			return  "За заход было собрано: $this->countMilk литров молока и $this->countEggs яиц.";
+
 		}
 	} 
-
 
 	/*................
 	 Надеюсь код вам понравился, понимаю что где-то могут быть ошибки или неудачные методы, я всегда готов учиться новому, буду рад если вы опишите все мои ошибки в письме на почту или в ВК.
 	  ...............*/
-	  
  ?>
