@@ -1,47 +1,29 @@
 <?php
-	//Базовый класс
-	require_once("classes/Animal.php");
-	//Класс курицы,наследник класса Animal
-	require_once ("classes/Chiken.php");
+	require_once("includes/autoload.php");
+
+
+	$Stable = new Stable();
+
+	//Добавляем овец
+	$Stable->addAnimal("Ship");
+	$Stable->addAnimal("Ship");
+	$Stable->addAnimal("Ship");
+	$Stable->addAnimal("SHIP");
+	$Stable->addAnimal("sHiP");
+
+	//Добавляем пчел
+	$Stable->addAnimal("bee");
+	$Stable->addAnimal("beE");
+
+
+	$Stable->serveAnimals();
+
+	$Stable->yieldDisplay();
 	
-	//Класс коровы,наследник класса Animal
-	require_once ("classes/Cow.php");
 	
-	//Класс Хлева
-	//Метод добавления животного - addAnimal, в параметре тип животного (chiken/cow)
-	//Метод обслуживания животных - serveAnimals
-	//Метод показа всего собранного урожая - yieldDisplay
-	require_once ("classes/Stable.php");
 
+	 print_r($Stable->animals);
 
-	$objStable = new Stable();
-	echo "Вас приветствует робот-собиратель дяди Боба.В хлеву 20 куриц и 10 коров. Что? Вы хотите добавить еще животных? Хорошо, сейчас.\n\n";
-
-	echo "Добавляем 1 курицу и 1 корову.\n\n";
+	 print_r($Stable->yield);
 	
-	echo $objStable->addAnimal("chiken");
-	echo $objStable->addAnimal("cow") . "\n";
-
-	echo "Сейчас соберем продукцию с животных.\n";
-	
-	$serveResult = $objStable->serveAnimals();
-	if($serveResult === true){
-		echo "Продукция собрана успешно.\n\n";
-	}
-	else{
-		echo "Что-то пошло не так.\n";
-	}
-
-	//Показываем на экран число собранной продукции.
-	 echo $objStable->yieldDisplay();
-
-	//Раскоментируйте строки ниже если хотите взглянуть на массив с обьектами.
-	//print_r($objStable->chikens);
-	//print_r($objStable->cows);
-
-	 
-	
-	//.............
-	//Пардон за большое количество echo, просто не мог определиться, писать их в функциях, или вот здесь, выбрал все таки здесь..
-	//В консоли вывод скудный, надеюсь он вас не отпугнет. Весь функционал в коде.
- ?>
+	?>

@@ -1,13 +1,14 @@
 <?php 
-	class Chiken extends Animal{
-		private $id;
-		public $regInStable;
-	
-		public function __construct($animalId){
-			$this->id = $animalId;
-			$this->regInStable = true;
-		}
+	class Chiken extends Animal implements animalInterface{
+		public static $countObjects;
+			
+		protected $id;
 
-		
+		public $minYield = 0;
+		public $maxYield = 1;
+
+		public  function takeYield(){
+		 	return rand($this->minYield,$this->maxYield);
+		}
 	}
  ?>
