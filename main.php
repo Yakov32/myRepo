@@ -1,9 +1,10 @@
 <?php
 	include_once("includes/autoload.php");
+
 	
 	//Чтобы сделать новый класс животного, просто создайте его в папке classes и опишите.
 
-	$Stable = new stable();
+	$Stable = new Stable();
 
 	//По условию в хлеву изначально 20 куриц и 10 коров.
 	for($i = 0;$i < 20;$i++){

@@ -1,5 +1,4 @@
 <?php 
-	
 	class Stable{
 		//Здесь вложенный массив. Пример: $animals['chikens'][и здесь животные-обьекты]
 		public $animals = array();
@@ -10,10 +9,10 @@
 		//Метод добавления животного.
 		public function addAnimal($animal){
 
-			if(!class_exists($animal)){
-				echo "Такого животного нет.";
+			/*if(!class_exists($animal)){
+				echo "Такого животное в нашей ферме не поддерживается.";
 				return false;
-			}
+			}*/
 			
 			$animal = (ucfirst(strtolower($animal)));
 			$animalsArray = $animal . "s";

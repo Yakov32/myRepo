@@ -1,6 +1,6 @@
 <?php 
 	use interfaces\animalInterface;
-	
+
 	class Chiken extends Animal implements animalInterface{
 		public static $countObjects;
 			
