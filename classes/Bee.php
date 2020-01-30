@@ -1,14 +1,15 @@
 <?php
+	use interfaces\animalInterface;
 	class Bee extends Animal implements animalInterface{
 		public static $countObjects;
 			
 		protected $id;
 
-		public $minYield = 50;
-		public $maxYield = 250;
+		const MIN_YIELD = 12;
+		const MAX_YIELD = 35;
 
 		public  function takeYield(){
-		 	return rand($this->minYield,$this->maxYield);
+		 	return rand(self::MIN_YIELD,self::MAX_YIELD);
 		}
 	} 
 
