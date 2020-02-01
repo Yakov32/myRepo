@@ -1,22 +1,17 @@
 <?php 
 	class Stable{
 		//Здесь вложенный массив. Пример: $animals['chikens'][и здесь животные-обьекты]
-		public $animals = array();
+		public $animals = [];
 		
 		//Массив с урожаем.
-	    public $yield = array();
+	    public $yield = [];
 
 		//Метод добавления животного.
-		public function addAnimal($animal){
+		public function addAnimal($animalObject){
 
-			/*if(!class_exists($animal)){
-				echo "Такого животное в нашей ферме не поддерживается.";
-				return false;
-			}*/
-			
-			$animal = (ucfirst(strtolower($animal)));
-			$animalsArray = $animal . "s";
-			$this->animals[$animalsArray][] = new $animal;			
+			$class = get_class($animalObject);
+			$animalsArray = $class . "s";
+			$this->animals[$animalsArray][] = $animalObject;		
 		}	
 		
 		//Функция сбора продукции с животных.
@@ -33,7 +28,6 @@
 				}
 			}	
 		}
-		
 		//Метод показа всего собранного  урожая
 		public function yieldDisplay(){
 		 	print_r($this->yield);

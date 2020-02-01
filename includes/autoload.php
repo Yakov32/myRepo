@@ -4,10 +4,10 @@
 
 	
 	function autoload($className){
-
+		
 		$path   =   "classes/";
 		$format = ".php";
-		$fullPath = $path . $className . $format;
+		$fullPath =  $path. $className . $format;
 		
 
 		include_once $fullPath;

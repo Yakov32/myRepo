@@ -1,10 +1,11 @@
 <?php 
-	use interfaces\animalInterface;
-
-	class Chiken extends Animal implements animalInterface{
+	use interfaces\AnimalInterface;
+	
+	class Chiken extends Animal implements AnimalInterface{
 		public static $countObjects;
 			
 		protected $id;
+		protected $regInStable;
 
 		const MIN_YIELD = 0;
 		const MAX_YIELD = 1;

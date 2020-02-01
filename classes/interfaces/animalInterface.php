@@ -1,7 +1,7 @@
 <?php
 	namespace interfaces;
 	
-	interface animalInterface{
+	interface AnimalInterface{
 
 		public function takeYield();
 	} 
